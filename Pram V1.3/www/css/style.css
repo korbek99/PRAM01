@@ -1,0 +1,163 @@
+/* Empty. Add your own CSS if you like */
+
+/* homescreen background image */
+
+.background.scroll-content {
+  background: url(../img/fondo.png) no-repeat center center fixed;
+  background-size: cover;
+  margin: auto;
+}
+.fondo_pater {
+  height: 500px;
+  position: absolute;
+  top: 2px;
+  left: 2%;
+  width: 342px;
+  opacity: 0.10;
+  border-radius: 20px;
+}
+.logo {
+  height: 60px;
+  position: absolute;
+  top: 180px;
+  left: 17%;
+}
+.logo_login {
+  height: 40px;
+  position: absolute;
+  top: 5px;
+  left: 85px;
+}
+.logo_login_bg {
+  height: 60px;
+  position: absolute;
+  top: 150px;
+  left: 370px;
+}
+.seleccion-button {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+}
+.listado {
+  position: relative;
+  top: 150px;
+}
+.color-menu {
+  background-color: #636;
+}
+.tabs-custom > .tabs,
+.tabs.tabs-custom {
+  border-color: rgba(146, 0, 200, 0.8)!important;
+  background-color: rgba(146, 0, 200, 0.8)!important;
+  background-image: linear-gradient(0deg, rgb(146, 0, 200), rgb(146, 0, 200) 50%, transparent 50%);
+  color: #fff;
+}
+.tabs-custom > .tabs .tab-item .badge,
+.tabs.tabs-custom .tab-item .badge {
+  background-color: #fff;
+  color: #387ef5;
+}
+/* telefono */
+
+@media (min-width: 567px) and (max-width: 800px) and (orientation: landscape) {
+  .contenedor,
+  div[contenedor] {
+    position: absolute;
+    left: 24%;
+    top: 40px;
+  }
+  .logo_login_bg {
+    visibility: hidden;
+  }
+    
+  table {
+    font-size: 65%;
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+/* Landscape  telefono*/
+
+@media (min-width: 320px) and (max-width: 567px) and (orientation: landscape) {
+  .contenedor,
+  div[contenedor] {
+    position: absolute;
+    left: 22%;
+    top: 60px;
+  }
+  .logo_login_bg {
+    visibility: hidden;
+  }
+  table {
+    font-size: 65%;
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+/* Portrait  telefono*/
+
+@media (min-width: 320px) and (max-width: 567px) and (orientation: portrait) {
+  .contenedor,
+  div[contenedor] {
+    position: absolute;
+    left: 2%;
+    top: 20px;
+  }
+  .logo_login_bg {
+    visibility: hidden;
+  }
+  table {
+    font-size: 65%;
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+/* Landscape  Tablet*/
+
+@media (min-width: 800px) and (orientation: landscape) {
+  .contenedor,
+  div[contenedor] {
+    position: absolute;
+    left: 2%;
+    top: 120px;
+  }
+  .logo_login_bg {
+    visibility: visible;
+    height: 120px;
+    position: absolute;
+    top: 150px;
+    left: 460px;
+  }
+  table {
+    font-size: 65%;
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+/* Portrait  Tablet*/
+
+@media (min-width: 800px) and (orientation: portrait) {
+  .contenedor,
+  div[contenedor] {
+    position: absolute;
+    left: 27%;
+    top: 200px;
+  }
+  .logo_login_bg {
+    height: 120px;
+    position: absolute;
+    top: 680px;
+    left: -50px;
+  }
+  table {
+    font-size: 65%;
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}

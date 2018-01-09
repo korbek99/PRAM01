@@ -1,0 +1,39 @@
+<ion-view view-title="Login" name="login-view" hide-nav-bar="true">
+
+  <ion-content class="background" has-header="false" padding="true">
+    <!-- ng="LoginOff" -->
+    <div name="contenedor" class="contenedor">
+      <img class="fondo_pater" src="img/fondo_pater.png" />
+      <img class="logo_login" src="img/logo.png" />
+
+      <div hideWhen="portrait">
+        <img class="logo_login_bg" src="img/logo.png" />
+      </div>
+
+      <form name="formulario"  style="position:absolute; top:80px; left:35px;"> <!--ng-submit="loginOffline()"-->
+        <div class="list list-inset" style="border-radius:10px">
+
+          <label class="item item-input" />
+          <i class="icon ion-person"></i>
+          <label name="user" text="Usuario" ng-model="data.username">User: {{user}}</label>
+          </label>
+
+          <label class="item item-input" ng-class="{ 'has-error' : formulario.pass.$invalid}">
+            <i class="icon ion-locked"> </i>
+            <input name="pass" required ng-disabled="loginOfflineStatus" type="password" placeholder="Password" ng-model="dataService.pass">
+          </label>
+
+        </div>
+        <button class="button button-block button-royal" ng-click="loginOffline()" ng-disabled="loginOfflineStatus || formulario.pass.$error.required" type="submit" style="width:280px">Login</button>
+        <!-- ng-click="count(1)" -->
+        <button class="button button-block button-royal" style="width:280px;" ng-controller="LoginCtrl" ng-click="Salir()">Salir</button>
+      </form>
+
+      <div>
+        <label name="PRAM" style="color:white; position:relative;  top:400px; left:120px;">PRAM Embarque</label>
+        <label name="Ver" style="color:white; position:relative; top:420px; left:20px">Ver Desarrollo</label>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

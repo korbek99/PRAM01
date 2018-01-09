@@ -1,0 +1,212 @@
+<ion-view view-title="Configuracion" class="background">
+
+  <ion-pane>
+
+    <ion-tabs class=" tabs-top tabs-striped tabs-color-royal">
+      <!-- Tab Vuelo -->
+      <ion-tab title="Vuelo">
+        <ion-nav-view name="vuelo">
+          <ion-content class="background">
+
+            <div name="selector" style="position:relative; top:35px;">
+
+              <div class="list">
+                <label class="item item-input" />
+                <input name="ruta" required type="text" placeholder="Ruta">
+                </label>
+              </div>
+
+              <div class="list" ng-controller="VueloCtrl">
+                <label class="item item-input item-select  item-royal">
+                  <div class="input-label">
+                    Aeropuerto Destino
+                  </div>
+                  <select>
+                    <option ng-repeat="vuelo in vuelos">{{vuelo}}</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="list">
+                <label class="item item-input" />
+                <input name="n_vuelo" required type="text" placeholder="N° Vuelo">
+                </label>
+              </div>
+
+              <div class="list" ng-controller="VueloCtrl">
+                <label class="item item-input item-select  item-royal">
+                  <div class="input-label">
+                    Operador de Vuelo
+                  </div>
+                  <select>
+                      <option ng-repeat="codeShare in codeShares">{{codeShare}}</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="list" ng-controller="VueloCtrl">
+                <label class="item item-input item-select  item-royal">
+                  <div class="input-label">
+                    Material
+                  </div>
+                  <select>
+                    <option ng-repeat="material in materiales">{{material}}</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="list" ng-controller="VueloCtrl">
+                <label class="item item-input item-select  item-royal">
+                  <div class="input-label">
+                    Configuracion Material
+                  </div>
+                  <select>
+                    <option ng-repeat="materialConfig in materialesConfig">{{materialConfig}}</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <button class="button button-block button-royal" style="position:relative; top:55px;">Guardar</button>
+
+          </ion-content>
+        </ion-nav-view>
+      </ion-tab>
+
+
+      <!-- Tab Accion -->
+      <ion-tab title="Accion">
+        <ion-nav-view name="tab2">
+          <ion-content class="background">
+            <div name="selector" style="position:relative; top:25px;">
+              <div class="list" ng-controller="ActionCtrl">
+                <label class="item item-input item-select   item-royal">
+                  <div class="input-label">
+                    Tipo Embarque
+                  </div>
+                  <select>
+                    <option ng-repeat="tipoEmbarque in tipoEmbarques">{{tipoEmbarque}}</option>
+                  </select>
+                </label>
+              </div>
+              <div class="list">
+                <label class="item item-input item-select  item-royal">
+                  <div class="input-label">
+                    Embarque
+                  </div>
+                  <select>
+                    <option>SCL</option>
+                    <option selected>US</option>
+                    <option>AUS</option>
+                    <option>EU</option>
+                    <option>CH</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="list">
+                <label class="item item-input item-select item-royal">
+                  <div class="input-label">
+                    Puerta
+                  </div>
+                  <select>
+                    <option>G29</option>
+                    <option selected>G30</option>
+                    <option>G25</option>
+                    <option>G24</option>
+                    <option>G25</option>
+                  </select>
+                </label>
+              </div>
+
+            </div>
+
+            <ion-list class="checkbox-royal" style="position:relative; top:45px; ">
+              <ion-checkbox ng-model="filter.red ">Documentacion Embarque</ion-checkbox>
+              <ion-checkbox ng-model="filter.yellow ">Equipaje de Mano</ion-checkbox>
+              <ion-checkbox ng-model="filter.pink ">Revision Seguridad</ion-checkbox>
+              <ion-checkbox ng-model="filter.green ">Latam Entertainment</ion-checkbox>
+            </ion-list>
+            <button class="button button-block button-royal " style="position:relative; top:50px; ">Guardar</button>
+
+          </ion-content>
+        </ion-nav-view>
+      </ion-tab>
+
+
+      <!-- Tab Contingecia -->
+      <ion-tab title="Contingencia ">
+        <ion-nav-view name="tab3 ">
+          <ion-content class="background ">
+
+            <div name="selector" style="position:relative; top:35px; ">
+              <div class="list" ng-controller="ContingencyCtrl">
+                <label class="item item-input item-select  item-royal">
+                  <div class="input-label">
+                    Motivo Contingencia
+                  </div>
+                  <select>
+                    <option ng-repeat="motivo in motivos">{{motivo}}</option>
+                  </select>
+                </label>
+              </div>
+
+              <div class="list" ng-controller="ContingencyCtrl">
+                <label class="item item-input item-select  item-royal">
+                  <div class="input-label">
+                    Sub-Motivo Contingencia
+                  </div>
+                  <select>
+                    <option ng-repeat="subMotivo in subMotivos">{{subMotivo}}</option>
+                  </select>
+                </label>
+              </div>
+
+              <!--              <div class="list ">
+                <label class="item item-input " />
+                <input name="sub_cont" required type="text " placeholder="Sub-Motivo Contingencia ">
+                </label>
+              </div>-->
+
+              <div class="list ">
+                <label class="item item-input item-select item-royal ">
+                  <div class="input-label">
+                    Nueva Puerta Embarque
+                  </div>
+                  <select>
+                    <option>G29</option>
+                    <option selected>G30</option>
+                    <option>G25</option>
+                    <option>G24</option>
+                    <option>G25</option>
+                  </select>
+                </label>
+              </div>
+              <div class="list ">
+                <label class="item item-input ">
+                  <span class="input-label" style="color:gray; ">Nuevo Horario Contingencia</span>
+                  <input type="time">
+                </label>
+              </div>
+              <div class="list ">
+                <label class="item item-input ">
+                  <span class="input-label" style="color:gray; ">Nuevo Dia Contingencia</span>
+                  <input type="date">
+                </label>
+                <button class="button button-block button-royal " style="position:relative; top:70px; ">Guardar</button>
+
+              </div>
+
+            </div>
+
+
+          </ion-content>
+        </ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+
+
+  </ion-pane>
+
+</ion-view>
+

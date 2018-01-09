@@ -1,0 +1,62 @@
+<ion-view view-title="Avisos"  >
+ 
+      <ion-pane>
+      
+      <ion-tabs class=" tabs-top tabs-striped tabs-color-royal" >
+      <!-- Tab Avisos -->
+      <ion-tab title="Avisos">
+      <ion-nav-view name="vuelo">
+      <ion-content class="background">
+        <div name="audio" style="position:absolute; top:20px; left:60px">
+          
+       <button class="button  button-block button-royal ion-play">Ingreso a la Sala de Embarque</button>
+       <button class="button button-block button-royal ion-play">Pre-Embarque</button>
+       <button class="button button-block  button-royal ion-play" >Embarque Inicia</button>
+       <button class="button  button-block  button-royal ion-play" >Embarque Grupo 1</button>
+       <button class="button button-block  button-royal ion-play" >Embarque Grupo 2</button>
+       <button class="button button-block button-royal ion-play" >Embarque Inmediato</button>
+       <button class="button button-block button-royal ion-play">Ultima Llamada</button>
+        </div>
+
+          </ion-content>
+          </ion-nav-view>
+          </ion-tab>
+
+
+      <!-- Avisos Contingencia -->
+      <ion-tab title="Avisos Contingencia">
+      <ion-nav-view name="tab2">
+      <ion-content class="background">
+                <div name="audio" style="position:absolute; top:20px; left:75px">
+
+      <button class="button button-block  button-royal ion-play" >Cancelacion de vuelo</button>
+       <button class="button button-block button-royal ion-play">Nueva Informacion N°1</button>
+       <button class="button button-block button-royal ion-play" >Nueva Informacion N°2</button>
+       <button class="button button-block button-royal ion-play">Postergacion Vuelo</button>
+  
+                </div>
+
+          </ion-content>
+        </ion-nav-view>
+      </ion-tab>
+
+
+      <!-- Otros Avisos -->
+        <ion-tab title="Otros Avisos">
+        <ion-nav-view name="tab3">
+        <ion-content class="background">
+       <div name="audio" style="position:absolute; top:20px; left:50px">
+
+       <button class="button button-block button-royal ion-play">Cambio Puerta</button>
+       <button class="button button-block button-royal ion-play">Asignacion Asientos PSGRS NST</button>
+        
+                  </div>
+          </ion-content>
+        </ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+
+
+  </ion-pane>
+</ion-view>

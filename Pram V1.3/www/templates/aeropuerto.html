@@ -1,0 +1,59 @@
+<ion-view view-title="Aeropuerto" name="aeropuerto-view" hide-nav-bar="true">
+
+  <ion-content class="background" ng="starter" has-header="false" padding="true">
+
+    <div name="contenedor" class="contenedor">
+      <img class="fondo_pater" src="img/fondo_pater.png" />
+      <img class="logo_login" src="img/logo.png" />
+
+      <div hideWhen="portrait">
+        <img class="logo_login_bg" src="img/logo.png" />
+      </div>
+
+      <form name="formulario"  style="position:absolute; top:80px; left:35px;"> <!--ng-submit="Ingreso()"-->
+        <div class="list list-inset" style="border-radius:10px">
+
+          <label class="item item-input" ng-class="{ 'has-error' : formulario.user.$invalid}" />
+          <i class="icon ion-person"></i>
+          <input name="user" required type="text" ng-disabled="true" placeholder="Usuario" ng-model="dataService.user" > <!--ng-model="data.username"-->
+          </label>
+
+          <label class="item item-input" ng-class="{ 'has-error' : formulario.pass.$invalid}">
+            <i class="icon ion-locked"> </i>
+            <input name="pass" required type="password" ng-disabled="true" placeholder="Password" ng-model="dataService.pass"><!--ng-model="data.password"-->
+          </label>
+
+<!--          <label class="item item-input" ng-class="{ 'has-error' : formulario.aeropuerto.$invalid}">
+            <i class="icon ion-plane"> </i>
+            <input name="aeropuerto" required type="text" placeholder="Aeropuerto" ng-model="data.aeropuerto">
+          </label>-->
+
+          <div class="list" ng-controller="AeropuertoCtrl">
+            <label class="item item-input item-select"><!--  item-royal-->
+              <div required class="input-label">
+                  <i class="icon ion-plane"> </i>
+                Aeropuerto
+              </div>
+              <select >
+                <option ng-repeat="aeropuerto in aeropuertosList">{{aeropuerto}}</option>
+              </select>
+            </label>
+          </div>
+
+        </div>
+        <button class="button button-block button-royal" type="submit" ng-click="IngresoSuccess()" style="width:280px">Siguiente</button>
+        <button class="button button-block button-royal" style="width:280px;" ng-controller="LoginCtrl" ng-click="logout()">Cerrar Sesion</button>
+      </form>
+      <div>
+
+        <label name="PRAM" style="color:white; position:relative;  top:400px; left:120px;">PRAM Embarque</label>
+        <label name="Ver" style="color:white; position:relative; top:420px; left:20px">Ver Desarrollo</label>
+      </div>
+    </div>
+
+
+
+
+
+  </ion-content>
+</ion-view>

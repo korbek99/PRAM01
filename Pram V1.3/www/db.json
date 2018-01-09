@@ -1,0 +1,21 @@
+{
+  "respuesta": [
+    {
+      "areopuerto_origen": "SCL",
+      "idioma_id": "1"
+    },
+   {
+      "areopuerto_origen": "ARG",
+      "idioma_id": "2"
+    },
+    {
+      "areopuerto_origen": "BR",
+      "idioma_id": "3"
+    },
+
+    {
+      "areopuerto_origen": "ESP",
+      "idioma_id": "4"
+    }
+  ]
+}
